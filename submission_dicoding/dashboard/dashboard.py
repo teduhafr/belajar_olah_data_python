@@ -3,12 +3,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 from pathlib import Path
-
-## from babel.numbers import format_currency kelihatannya ini tidak akan dipakai
 sns.set(style='dark')
+#file yang diperlukan
+
 data_csv = Path(__file__).parents[0]/ 'data.csv'
 all_df = pd.read_csv(data_csv)
-
 #untuk dashboard
 
 tahun=list(all_df['year'].unique())
@@ -64,7 +63,7 @@ with st.sidebar:
     # Menambahkan logo perusahaan
     left_co, cent_co,last_co = st.columns(3)
     with cent_co:
-        st.image("./asset/gambar_depan.png", width=150)
+        st.image('https://raw.githubusercontent.com/teduhafr/belajar_olah_data_python/main/submission_dicoding/dashboard/asset/gambar_depan.png', width=150)
     
     # Mengambil start_date & end_date dari date_input
     option = st.selectbox(
