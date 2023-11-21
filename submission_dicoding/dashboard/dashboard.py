@@ -5,7 +5,7 @@ import streamlit as st
 ## from babel.numbers import format_currency kelihatannya ini tidak akan dipakai
 sns.set(style='dark')
 
-all_df = pd.read_csv("data.csv")
+all_df = pd.read_csv("./data.csv")
 
 #untuk dashboard
 
