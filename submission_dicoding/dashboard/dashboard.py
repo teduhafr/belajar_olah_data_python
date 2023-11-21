@@ -2,10 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
+from pathlib import Path
+
 ## from babel.numbers import format_currency kelihatannya ini tidak akan dipakai
 sns.set(style='dark')
-
-all_df = pd.read_csv("./data.csv")
+data_csv = Path(__file__).parents[0]/ 'data.csv'
+all_df = pd.read_csv(data_csv)
 
 #untuk dashboard
 
